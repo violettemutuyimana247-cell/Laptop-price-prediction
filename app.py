@@ -11,7 +11,8 @@ import pandas as pd
 import streamlit as st
 
 # Load the trained model
-loaded_model = pickle.load(open('C:/Users/user/Downloads/Lap top/Laptop_price.sav','rb'))
+with open('Laptop_price.sav','rb')as file:
+    loaded_model = pickle.load(file)
 
 def laptop_price_prediction(Processor_Speed, RAM_Size, Storage_Capacity):
     # Create a dataframe for the model
@@ -48,3 +49,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
