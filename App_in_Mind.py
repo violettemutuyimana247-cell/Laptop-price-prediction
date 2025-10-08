@@ -11,7 +11,7 @@ import numpy as np
 
 # Load the pickled model
 try:
-    with open('saving.pkl', 'rb') as file:
+    with open('Saving.pkl', 'rb') as file:
         Model = pickle.load(file)
 except Exception as e:
     st.error(f"Error loading model: {e}")
@@ -39,4 +39,5 @@ if st.button("Predict"):
         st.error(f"Prediction error: {e}")
 
 # Optional: Add a note about model requirements
+
 #st.write("Note: Ensure the model expects inputs in the order [Processing speed, RAM, Storage].")
